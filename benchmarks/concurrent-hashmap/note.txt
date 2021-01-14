@@ -1,0 +1,10 @@
+#Non-SC:
+The following case can be non-SC.
+
+Thrd1						Thrd2
+put(k1, v1); // a			put(k2, v2); // c
+get(k2); // b				get(k1); // d
+
+When b and d both read the old head of the list (and they later grab the lock,
+making it the interface SC), it's non-SC because neither reads the updated
+value.

@@ -1,0 +1,9 @@
+Result 0:
+wildcard 1 -> memory_order_relaxed
+wildcard 2 -> memory_order_relaxed
+wildcard 3 -> memory_order_acquire
+wildcard 4 -> memory_order_relaxed
+wildcard 6 -> memory_order_relaxed
+wildcard 7 -> memory_order_relaxed
+wildcard 9 -> memory_order_relaxed
+wildcard 13 -> memory_order_release

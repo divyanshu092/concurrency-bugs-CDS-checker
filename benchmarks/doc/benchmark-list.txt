@@ -1,0 +1,38 @@
+*** LOCK LIKE THINGS ***
+
+barrier [36 LOC in .h]
+ C++ implementation of a spinlock barrier with a wait() call
+
+seqlock [50 LOC]
+ C implementation of a lock; two atomic_ints of state
+
+dekker-fences [75 LOC]
+ C++ implementation of Dekker's critical seciton algorithm, implemented with fences
+
+linuxrwlocks [80 LOC]
+ C implementation of linux-like RW lock
+
+*** ARRAY-BASED DATA STRUCTURES ***
+
+mpmc-queue [97 LOC]
+ C++ implementation of bounded queue
+ uses 3 atomic ints as state, plus the queue itself---an array of fixed size
+
+chase-lev-deque-bugfix [23 LOC in .h, 85 LOC in .c]
+ C implementation of a deque ADT, uses atomic_store_explicit, and an array
+
+*** LINKED DATA STRUCTURES ****
+
+mcs-lock [93 LOC]
+ C++ implementation of mcs mutex, implements a linked list
+
+treiber-stack [158 LOC]
+ms-queue [192 LOC]
+ C implementation of a stack and queue, respectively. Uses -> next, indexes an array.
+
+spsc-queue [77 LOC in queue.h]
+ C++ implementation of a queue via linked list
+
+cliffc-hashtable [971 LOC in .h file]
+ C++ implementation of a simplified Java NonblockingHashMap
+
