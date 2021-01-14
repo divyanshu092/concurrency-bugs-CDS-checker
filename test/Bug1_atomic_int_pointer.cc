@@ -31,7 +31,7 @@ struct Alpha q;
 static void a(void *obj)
 {
 	printf("the value of p1 is %ld \n", atomic_load_explicit((atomic_long*)(&(q.p)), memory_order_relaxed));
-	x->lock();
+	// x->lock();
 	if(atomic_load_explicit((atomic_long*)(&(q.p)), memory_order_relaxed))
 	{
 		// int count = 50;
@@ -44,7 +44,7 @@ static void a(void *obj)
 		ASSERT(atomic_load_explicit((atomic_long*)(&(q.p)), memory_order_relaxed) != 0);
 		printf("the value of p2 is %ld \n", atomic_load_explicit((atomic_long*)(&(q.p)), memory_order_relaxed));
 	}
-	x->unlock();
+	// x->unlock();
 }
 
 static void b(void *obj)
@@ -55,11 +55,11 @@ static void b(void *obj)
 	// 	printf("Thread 2 ");
 	// 	count--;
 	// }
-	x->lock();
+	// x->lock();
 	// q.p = NULL;
 	atomic_store_explicit((atomic_long*)(&(q.p)), 0, memory_order_relaxed);
 	printf("the value of p3 is %ld \n", atomic_load_explicit((atomic_long*)(&(q.p)), memory_order_relaxed));
-	x->unlock();
+	// x->unlock();
 }
 
 int user_main(int argc, char **argv)
