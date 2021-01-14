@@ -1,5 +1,10 @@
+An extension to CDS Checker tool.
+================================
+Some real-world Bug examples, replication, testing and solution using locks and condition variables.
+Pointer support added for atomic int.
+
+The CDSChecker tool and instructions to use:
 CDSChecker: A Model Checker for C11 and C++11 Atomics
-=====================================================
 
 CDSChecker is a model checker for C11/C++11 which exhaustively explores the
 behaviors of code under the C/C++ memory model. It uses partial order reduction
